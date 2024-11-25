@@ -8,5 +8,7 @@ namespace _11_1BooksDbCRUD.Models
 {
     public class Category
     {
+        public int CategoriesID { get; set; }
+        public string? Name { get; set; }
     }
 }
