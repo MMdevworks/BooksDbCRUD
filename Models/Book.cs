@@ -11,7 +11,6 @@ namespace _11_1BooksDbCRUD.Models
     public class Book
     {
         [Key]
-        //[DatabaseGenerated(DatabaseGeneratedOption.None)]
         public string ISBNid { get; set; }
         public string Title { get; set; }
         public string? Author { get; set; }

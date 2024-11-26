@@ -38,11 +38,11 @@
             lblAuthor = new Label();
             lblDescription = new Label();
             lblStock = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
+            txtIsbn = new TextBox();
+            txtTitle = new TextBox();
+            txtAuthor = new TextBox();
+            txtDescription = new TextBox();
+            txtStock = new TextBox();
             btnDelete = new Button();
             lblCategory = new Label();
             comboCategory = new ComboBox();
@@ -74,6 +74,7 @@
             btnAdd.TabIndex = 2;
             btnAdd.Text = "Add";
             btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += btnAdd_Click;
             // 
             // btnSubmit
             // 
@@ -83,6 +84,7 @@
             btnSubmit.TabIndex = 3;
             btnSubmit.Text = "Submit";
             btnSubmit.UseVisualStyleBackColor = true;
+            btnSubmit.Click += btnSubmit_Click;
             // 
             // btnSelect
             // 
@@ -92,6 +94,7 @@
             btnSelect.TabIndex = 4;
             btnSelect.Text = "Select";
             btnSelect.UseVisualStyleBackColor = true;
+            btnSelect.Click += btnSelect_Click;
             // 
             // btnUpdate
             // 
@@ -101,6 +104,7 @@
             btnUpdate.TabIndex = 5;
             btnUpdate.Text = "Update";
             btnUpdate.UseVisualStyleBackColor = true;
+            btnUpdate.Click += btnUpdate_Click;
             // 
             // lblTitle
             // 
@@ -138,40 +142,40 @@
             lblStock.TabIndex = 10;
             lblStock.Text = "Stock";
             // 
-            // textBox1
+            // txtIsbn
             // 
-            textBox1.Location = new Point(120, 256);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 11;
+            txtIsbn.Location = new Point(120, 256);
+            txtIsbn.Name = "txtIsbn";
+            txtIsbn.Size = new Size(100, 23);
+            txtIsbn.TabIndex = 11;
             // 
-            // textBox2
+            // txtTitle
             // 
-            textBox2.Location = new Point(120, 299);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 12;
+            txtTitle.Location = new Point(120, 299);
+            txtTitle.Name = "txtTitle";
+            txtTitle.Size = new Size(100, 23);
+            txtTitle.TabIndex = 12;
             // 
-            // textBox3
+            // txtAuthor
             // 
-            textBox3.Location = new Point(120, 336);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(100, 23);
-            textBox3.TabIndex = 13;
+            txtAuthor.Location = new Point(120, 336);
+            txtAuthor.Name = "txtAuthor";
+            txtAuthor.Size = new Size(100, 23);
+            txtAuthor.TabIndex = 13;
             // 
-            // textBox4
+            // txtDescription
             // 
-            textBox4.Location = new Point(120, 377);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(100, 23);
-            textBox4.TabIndex = 14;
+            txtDescription.Location = new Point(120, 377);
+            txtDescription.Name = "txtDescription";
+            txtDescription.Size = new Size(100, 23);
+            txtDescription.TabIndex = 14;
             // 
-            // textBox5
+            // txtStock
             // 
-            textBox5.Location = new Point(120, 413);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(100, 23);
-            textBox5.TabIndex = 15;
+            txtStock.Location = new Point(120, 413);
+            txtStock.Name = "txtStock";
+            txtStock.Size = new Size(100, 23);
+            txtStock.TabIndex = 15;
             // 
             // btnDelete
             // 
@@ -181,6 +185,7 @@
             btnDelete.TabIndex = 16;
             btnDelete.Text = "Delete";
             btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Click += btnDelete_Click;
             // 
             // lblCategory
             // 
@@ -207,11 +212,11 @@
             Controls.Add(comboCategory);
             Controls.Add(lblCategory);
             Controls.Add(btnDelete);
-            Controls.Add(textBox5);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(txtStock);
+            Controls.Add(txtDescription);
+            Controls.Add(txtAuthor);
+            Controls.Add(txtTitle);
+            Controls.Add(txtIsbn);
             Controls.Add(lblStock);
             Controls.Add(lblDescription);
             Controls.Add(lblAuthor);
@@ -242,11 +247,11 @@
         private Label lblAuthor;
         private Label lblDescription;
         private Label lblStock;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textBox5;
+        private TextBox txtIsbn;
+        private TextBox txtTitle;
+        private TextBox txtAuthor;
+        private TextBox txtDescription;
+        private TextBox txtStock;
         private Button btnDelete;
         private Label lblCategory;
         private ComboBox comboCategory;

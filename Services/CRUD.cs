@@ -1,4 +1,5 @@
-﻿using _11_1BooksDbCRUD.Models;
+﻿using _11_1BooksDbCRUD.Data;
+using _11_1BooksDbCRUD.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,10 +11,10 @@ namespace _11_1BooksDbCRUD.Services
     public interface ICRUD
     {
         void AddRecord(Book book);
-        void DeleteRecord(int bookId);
-        void UpdateRecord(int bookId, Book book);
+        void DeleteRecord(string bookId);
+        void UpdateRecord(string bookId, Book book);
         ICollection<Book> GetAllRecords();
-        Book FindBook(int id);
+        Book FindBook(string id);
         ICollection<Category> GetAllCategories();
     }
 
@@ -25,16 +26,16 @@ namespace _11_1BooksDbCRUD.Services
             Data.Data.bookContext.SaveChanges();
         }
 
-        public void DeleteRecord(int bookId)
+        public void DeleteRecord(string isbn)
         {
-            var book = Data.Data.bookContext.Books.Find(bookId);
+            var book = Data.Data.bookContext.Books.Find(isbn);
             Data.Data.bookContext.Books.Remove(book);
             Data.Data.bookContext.SaveChanges();
         }
 
-        public Book FindBook(int id)
+        public Book FindBook(string isbn)
         {
-            return Data.Data.bookContext.Books.Find(id);
+            return Data.Data.bookContext.Books.Find(isbn);
         }
 
         public ICollection<Category> GetAllCategories()
@@ -47,7 +48,7 @@ namespace _11_1BooksDbCRUD.Services
             return Data.Data.bookContext.Books.ToList();
         }
 
-        public void UpdateRecord(int bookId, Book book)
+        public void UpdateRecord(string bookId, Book book)
         {
             var bookToUpdate = Data.Data.bookContext.Books.Find(bookId);
             bookToUpdate.ISBNid = book.ISBNid;
