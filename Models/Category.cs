@@ -14,6 +14,6 @@ namespace _11_1BooksDbCRUD.Models
         [Key]
         public int CategoriesId { get; set; }
         public string? Name { get; set; }
-        public virtual ObservableCollectionListSource<Book> Books { get; set; }
+        public virtual ObservableCollectionListSource<Book> Books { get; } = new();
     }
 }

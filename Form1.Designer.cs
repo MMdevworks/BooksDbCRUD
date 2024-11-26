@@ -28,13 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
+            bookGrid = new DataGridView();
             lblIsbn = new Label();
             btnAdd = new Button();
             btnSubmit = new Button();
             btnSelect = new Button();
             btnUpdate = new Button();
-            dataGridView2 = new DataGridView();
             lblTitle = new Label();
             lblAuthor = new Label();
             lblDescription = new Label();
@@ -45,17 +44,18 @@
             textBox4 = new TextBox();
             textBox5 = new TextBox();
             btnDelete = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
+            lblCategory = new Label();
+            comboCategory = new ComboBox();
+            ((System.ComponentModel.ISupportInitialize)bookGrid).BeginInit();
             SuspendLayout();
             // 
-            // dataGridView1
+            // bookGrid
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(47, 33);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(349, 196);
-            dataGridView1.TabIndex = 0;
+            bookGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            bookGrid.Location = new Point(47, 33);
+            bookGrid.Name = "bookGrid";
+            bookGrid.Size = new Size(712, 196);
+            bookGrid.TabIndex = 0;
             // 
             // lblIsbn
             // 
@@ -102,22 +102,14 @@
             btnUpdate.Text = "Update";
             btnUpdate.UseVisualStyleBackColor = true;
             // 
-            // dataGridView2
-            // 
-            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(422, 33);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.Size = new Size(349, 196);
-            dataGridView2.TabIndex = 6;
-            // 
             // lblTitle
             // 
             lblTitle.AutoSize = true;
             lblTitle.Location = new Point(47, 299);
             lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(27, 15);
+            lblTitle.Size = new Size(29, 15);
             lblTitle.TabIndex = 7;
-            lblTitle.Text = "title";
+            lblTitle.Text = "Title";
             // 
             // lblAuthor
             // 
@@ -190,11 +182,30 @@
             btnDelete.Text = "Delete";
             btnDelete.UseVisualStyleBackColor = true;
             // 
+            // lblCategory
+            // 
+            lblCategory.AutoSize = true;
+            lblCategory.Location = new Point(308, 396);
+            lblCategory.Name = "lblCategory";
+            lblCategory.Size = new Size(55, 15);
+            lblCategory.TabIndex = 17;
+            lblCategory.Text = "Category";
+            // 
+            // comboCategory
+            // 
+            comboCategory.FormattingEnabled = true;
+            comboCategory.Location = new Point(398, 394);
+            comboCategory.Name = "comboCategory";
+            comboCategory.Size = new Size(121, 23);
+            comboCategory.TabIndex = 18;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(comboCategory);
+            Controls.Add(lblCategory);
             Controls.Add(btnDelete);
             Controls.Add(textBox5);
             Controls.Add(textBox4);
@@ -205,30 +216,28 @@
             Controls.Add(lblDescription);
             Controls.Add(lblAuthor);
             Controls.Add(lblTitle);
-            Controls.Add(dataGridView2);
             Controls.Add(btnUpdate);
             Controls.Add(btnSelect);
             Controls.Add(btnSubmit);
             Controls.Add(btnAdd);
             Controls.Add(lblIsbn);
-            Controls.Add(dataGridView1);
+            Controls.Add(bookGrid);
             Name = "Form1";
             Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
+            Load += Form1_Load;
+            ((System.ComponentModel.ISupportInitialize)bookGrid).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private DataGridView dataGridView1;
+        private DataGridView bookGrid;
         private Label lblIsbn;
         private Button btnAdd;
         private Button btnSubmit;
         private Button btnSelect;
         private Button btnUpdate;
-        private DataGridView dataGridView2;
         private Label lblTitle;
         private Label lblAuthor;
         private Label lblDescription;
@@ -239,5 +248,7 @@
         private TextBox textBox4;
         private TextBox textBox5;
         private Button btnDelete;
+        private Label lblCategory;
+        private ComboBox comboCategory;
     }
 }

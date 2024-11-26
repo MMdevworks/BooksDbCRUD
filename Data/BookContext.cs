@@ -40,7 +40,5 @@ namespace _11_1BooksDbCRUD.Data
             );
 
         }
-
-
     }
 }
