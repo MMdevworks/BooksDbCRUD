@@ -60,7 +60,7 @@
             // lblIsbn
             // 
             lblIsbn.AutoSize = true;
-            lblIsbn.Location = new Point(47, 259);
+            lblIsbn.Location = new Point(82, 259);
             lblIsbn.Name = "lblIsbn";
             lblIsbn.Size = new Size(32, 15);
             lblIsbn.TabIndex = 1;
@@ -68,7 +68,7 @@
             // 
             // btnAdd
             // 
-            btnAdd.Location = new Point(308, 282);
+            btnAdd.Location = new Point(240, 370);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(75, 23);
             btnAdd.TabIndex = 2;
@@ -78,7 +78,7 @@
             // 
             // btnSubmit
             // 
-            btnSubmit.Location = new Point(308, 311);
+            btnSubmit.Location = new Point(240, 399);
             btnSubmit.Name = "btnSubmit";
             btnSubmit.Size = new Size(75, 23);
             btnSubmit.TabIndex = 3;
@@ -88,7 +88,7 @@
             // 
             // btnSelect
             // 
-            btnSelect.Location = new Point(408, 282);
+            btnSelect.Location = new Point(340, 370);
             btnSelect.Name = "btnSelect";
             btnSelect.Size = new Size(75, 23);
             btnSelect.TabIndex = 4;
@@ -98,7 +98,7 @@
             // 
             // btnUpdate
             // 
-            btnUpdate.Location = new Point(408, 311);
+            btnUpdate.Location = new Point(340, 399);
             btnUpdate.Name = "btnUpdate";
             btnUpdate.Size = new Size(75, 23);
             btnUpdate.TabIndex = 5;
@@ -109,7 +109,7 @@
             // lblTitle
             // 
             lblTitle.AutoSize = true;
-            lblTitle.Location = new Point(47, 299);
+            lblTitle.Location = new Point(304, 259);
             lblTitle.Name = "lblTitle";
             lblTitle.Size = new Size(29, 15);
             lblTitle.TabIndex = 7;
@@ -118,7 +118,7 @@
             // lblAuthor
             // 
             lblAuthor.AutoSize = true;
-            lblAuthor.Location = new Point(47, 339);
+            lblAuthor.Location = new Point(524, 259);
             lblAuthor.Name = "lblAuthor";
             lblAuthor.Size = new Size(44, 15);
             lblAuthor.TabIndex = 8;
@@ -127,7 +127,7 @@
             // lblDescription
             // 
             lblDescription.AutoSize = true;
-            lblDescription.Location = new Point(47, 380);
+            lblDescription.Location = new Point(47, 311);
             lblDescription.Name = "lblDescription";
             lblDescription.Size = new Size(67, 15);
             lblDescription.TabIndex = 9;
@@ -136,7 +136,7 @@
             // lblStock
             // 
             lblStock.AutoSize = true;
-            lblStock.Location = new Point(47, 413);
+            lblStock.Location = new Point(297, 311);
             lblStock.Name = "lblStock";
             lblStock.Size = new Size(36, 15);
             lblStock.TabIndex = 10;
@@ -146,40 +146,40 @@
             // 
             txtIsbn.Location = new Point(120, 256);
             txtIsbn.Name = "txtIsbn";
-            txtIsbn.Size = new Size(100, 23);
+            txtIsbn.Size = new Size(157, 23);
             txtIsbn.TabIndex = 11;
             // 
             // txtTitle
             // 
-            txtTitle.Location = new Point(120, 299);
+            txtTitle.Location = new Point(339, 256);
             txtTitle.Name = "txtTitle";
-            txtTitle.Size = new Size(100, 23);
+            txtTitle.Size = new Size(157, 23);
             txtTitle.TabIndex = 12;
             // 
             // txtAuthor
             // 
-            txtAuthor.Location = new Point(120, 336);
+            txtAuthor.Location = new Point(574, 256);
             txtAuthor.Name = "txtAuthor";
-            txtAuthor.Size = new Size(100, 23);
+            txtAuthor.Size = new Size(157, 23);
             txtAuthor.TabIndex = 13;
             // 
             // txtDescription
             // 
-            txtDescription.Location = new Point(120, 377);
+            txtDescription.Location = new Point(120, 308);
             txtDescription.Name = "txtDescription";
-            txtDescription.Size = new Size(100, 23);
+            txtDescription.Size = new Size(157, 23);
             txtDescription.TabIndex = 14;
             // 
             // txtStock
             // 
-            txtStock.Location = new Point(120, 413);
+            txtStock.Location = new Point(339, 303);
             txtStock.Name = "txtStock";
-            txtStock.Size = new Size(100, 23);
+            txtStock.Size = new Size(157, 23);
             txtStock.TabIndex = 15;
             // 
             // btnDelete
             // 
-            btnDelete.Location = new Point(519, 282);
+            btnDelete.Location = new Point(451, 370);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(75, 23);
             btnDelete.TabIndex = 16;
@@ -190,7 +190,7 @@
             // lblCategory
             // 
             lblCategory.AutoSize = true;
-            lblCategory.Location = new Point(308, 396);
+            lblCategory.Location = new Point(513, 311);
             lblCategory.Name = "lblCategory";
             lblCategory.Size = new Size(55, 15);
             lblCategory.TabIndex = 17;
@@ -199,9 +199,9 @@
             // comboCategory
             // 
             comboCategory.FormattingEnabled = true;
-            comboCategory.Location = new Point(398, 394);
+            comboCategory.Location = new Point(574, 308);
             comboCategory.Name = "comboCategory";
-            comboCategory.Size = new Size(121, 23);
+            comboCategory.Size = new Size(151, 23);
             comboCategory.TabIndex = 18;
             // 
             // Form1

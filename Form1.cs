@@ -19,6 +19,10 @@ namespace _11_1BooksDbCRUD
             bookGrid.Columns[6].Visible = false;
             btnSubmit.Enabled = false;
             btnUpdate.Enabled = false;
+           
+            foreach (TextBox tb in this.Controls.OfType<TextBox>())
+                tb.Enabled = false;
+            
             foreach (var c in crud.GetAllCategories())
             {
                 comboCategory.Items.Add(c.Name);
@@ -33,8 +37,11 @@ namespace _11_1BooksDbCRUD
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            foreach (TextBox tb in this.Controls.OfType<TextBox>())
+                tb.Enabled = true;
             Clear();
             btnSubmit.Enabled = true;
+            btnAdd.Enabled = false;
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)
@@ -53,15 +60,21 @@ namespace _11_1BooksDbCRUD
                     crud.AddRecord(newbook);
                     MessageBox.Show("Record Added!");
                 }
-
             }
             btnSubmit.Enabled = false;
+            btnAdd.Enabled = true;
             bookGrid.DataSource = crud.GetAllRecords();
             Clear();
         }
 
         private void btnSelect_Click(object sender, EventArgs e)
         {
+            foreach (TextBox tb in this.Controls.OfType<TextBox>())
+            if (tb.Name != "txtIsbn")
+            {
+                tb.Enabled = true;
+            }
+            txtIsbn.Enabled = false;
             var id = bookGrid.CurrentRow.Cells[0].Value;
             var bookToUpdate = crud.FindBook((string)id);
             txtIsbn.Text = bookToUpdate.ISBNid;
@@ -71,21 +84,19 @@ namespace _11_1BooksDbCRUD
             txtStock.Text = bookToUpdate.Stock.ToString();
             comboCategory.SelectedIndex = bookToUpdate.CategoryId - 1;
             btnUpdate.Enabled = true;
-
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-
-            var id = txtIsbn.Text;
-            //if (string.IsNullOrEmpty(id))
-            //{
-            //    MessageBox.Show("ISBN cannot be null!");
-            //    return;
-            //}       
+            string? id = txtIsbn.Text;
 
             var bookToUpdate = crud.FindBook(id);
-            bookToUpdate.ISBNid = txtIsbn.Text;
+            if (bookToUpdate == null)
+            {
+                MessageBox.Show("No book id found");
+            }
+
+            txtIsbn.Enabled = false;
             bookToUpdate.Title = txtTitle.Text;
             bookToUpdate.Author = txtAuthor.Text;
             bookToUpdate.Description = txtDescription.Text;
@@ -101,7 +112,7 @@ namespace _11_1BooksDbCRUD
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-                var id = bookGrid.CurrentRow.Cells[0].Value;
+            var id = bookGrid.CurrentRow.Cells[0].Value;
             crud.DeleteRecord((string)id);
             MessageBox.Show("Record Deleted!");
             bookGrid.DataSource = crud.GetAllRecords();

@@ -51,7 +51,7 @@ namespace _11_1BooksDbCRUD.Services
         public void UpdateRecord(string bookId, Book book)
         {
             var bookToUpdate = Data.Data.bookContext.Books.Find(bookId);
-            bookToUpdate.ISBNid = book.ISBNid;
+            //bookToUpdate.ISBNid = book.ISBNid;
             bookToUpdate.Title = book.Title;
             bookToUpdate.Author = book.Author;
             bookToUpdate.Description = book.Description;
