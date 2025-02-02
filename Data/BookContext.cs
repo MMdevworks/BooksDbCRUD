@@ -1,10 +1,6 @@
 ﻿using _11_1BooksDbCRUD.Models;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Configuration;
 
 namespace _11_1BooksDbCRUD.Data
 {
@@ -15,7 +11,9 @@ namespace _11_1BooksDbCRUD.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=MariePC\MSSQLSERVER01;Database=booksdb;Integrated Security=true;Trusted_Connection=true;TrustServerCertificate=True");
+            //optionsBuilder.UseSqlServer(@"Server=MariePC\MSSQLSERVER01;Database=booksdb;Integrated Security=true;Trusted_Connection=true;TrustServerCertificate=True");
+            var connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+            optionsBuilder.UseSqlServer(connectionString);
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
