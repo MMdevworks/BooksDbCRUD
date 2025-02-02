@@ -6,7 +6,7 @@
 
 A books database that utilizes Winforms to perform CRUD operations and interact with Sql Server.
 
-<b>Project Goal:</b> Sql Server db interaction
+<b>Project Objective:</b> Sql Server db interaction
 
 ### Built With
  [![Csharp][csharp-badge]][csharp-url]
@@ -68,7 +68,7 @@ Before you can run this application locally, make sure you have the following to
 
 <b>Delete:</b> Click a record in the table > press Delete to remove the record
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">Back to top</a>)</p>
 
 [dotnet-badge]: https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white
 [Dotnet-url]: https://dotnet.microsoft.com/
